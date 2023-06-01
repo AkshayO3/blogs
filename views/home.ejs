@@ -2,7 +2,7 @@
 
 <h1>Home</h1>
 <p><%=startingC%></p>
-<%for(let i=0;i<po.length;i++){%>
-<%console.log(po[i].title)}%>
+<%po.forEach(function(post){%>
+<%console.log(post.title)})%>
 
 <%- include("partials/footer") -%>
