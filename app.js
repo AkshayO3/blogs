@@ -42,12 +42,10 @@ app.get("/posts/:topic",function (req,res) {
   posts.forEach(function (post) {
     let lo=_.lowerCase(req.params.topic)
     if (lo === _.lowerCase(post.title)) {
-      console.log("Match Found");
+      res.render("post",{tit:post.title,con:post.content})
     }
   })
 })
-
-
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
