@@ -36,7 +36,9 @@ const post={
   posts.push(post);
   res.redirect("/")
 })
-
+app.get("/posts/:topic",function (req,res){
+  console.log(req.params.topic);
+})
 
 
 
