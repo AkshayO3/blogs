@@ -36,9 +36,14 @@ const post={
   posts.push(post);
   res.redirect("/")
 })
-app.get("/posts/:topic",function (req,res){
-  console.log(req.params.topic);
+app.get("/posts/:topic",function (req,res) {
+  posts.forEach(function (post) {
+    if (post.title === req.params.topic) {
+      console.log("Match Found");
+    }
+  })
 })
+
 
 
 
