@@ -30,10 +30,9 @@ app.get("/compose",function(req,res){
   res.render("compose");
 })
 app.post("/compose",function(req,res){
-  const trunstr = req.body.content.substring(0, 100)+'...'
   const post={
   title:req.body.blog,
-  content:trunstr
+  content:req.body.content
 };
   posts.push(post);
   res.redirect("/")
